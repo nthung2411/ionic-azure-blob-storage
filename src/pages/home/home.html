@@ -7,8 +7,17 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label for="username">File</ion-label>
+        <ion-input type="file" id="username" class="form-control" ngModel name="username" required (change)="onFileChange($event)">
+        </ion-input>
+      </ion-item>
+      <ion-item *ngIf="sourceUri">
+        <img src="{{sourceUri}}" width="300">   
+      </ion-item>
+    </ion-list>
+    <button ion-button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button>
+  </form>
 </ion-content>
