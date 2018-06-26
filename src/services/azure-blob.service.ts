@@ -4,9 +4,9 @@ import { BlobService, UploadConfig, UploadParams } from 'angular-azure-blob-serv
 
 export const Config: UploadParams = {
     // tslint:disable-next-line:max-line-length
-    sas: '?sv=2017-11-09&ss=bfqt&srt=sco&sp=rwdlacup&se=2018-06-13T14:24:11Z&st=2018-06-13T06:24:11Z&spr=https&sig=jANEjXnVbdErKHo2Us4D9P3ltLWBnas%2FnQMr2Aea7Z4%3D',
-    storageAccount: 'handheldphotoblobstorage',
-    containerName: 'handheld-photos'
+    sas: 'shared access token',
+    storageAccount: 'blob storage domain name',
+    containerName: 'blob container name'
 };
 
 @Injectable()
